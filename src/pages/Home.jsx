@@ -3,6 +3,7 @@ import UserContext from "../context/userContext";
 import LanguageSkills from "../components/LanguageSkills";
 import Services from "../components/Services";
 import HardSkills from "../components/HardSkills";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -64,15 +65,16 @@ const Home = () => {
         </div>
 
         {/* Services */}
-        {userData.user.services ? (
-          <>{userData.user.services ? <Services /> : null}</>
-        ) : null}
+        {userData.user.services ? <Services /> : null}
 
         {/* Laguage Skills*/}
         {userData.laguage ? <LanguageSkills /> : null}
 
         {/* Hard Skills*/}
         {userData.user.skills ? <HardSkills /> : null}
+
+        {/*Reviews*/}
+        {userData.user.testimonials ? <Reviews /> : null}
       </div>
     </div>
   );
