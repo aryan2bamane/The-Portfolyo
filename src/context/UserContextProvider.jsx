@@ -6,11 +6,23 @@ const UserContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Vars--------------------------------------
+
+  const [userName, setUserName] = useState(null);
+  const [userTitle, setUserTitle] = useState(null);
+  const [userSubTitle, setUserSubTitle] = useState(null);
+  const [userPic, setUserPic] = useState(null);
+  const [userAddress, setUserAddress] = useState(null);
+  const [userDesc, setUserDesc] = useState(null);
+  const [userService, setUserService] = useState(null);
+
+  // Vars--------------------------------------
+
   const userId = "65b3a22c01d900e96c4219ae"; // User ID provided in the endpoint
 
   useEffect(() => {
-    const fetchData = () => {
-      fetch(
+    const fetchData = async () => {
+      await fetch(
         `https://portfolio-backend-30mp.onrender.com/api/v1/get/user/${userId}`
       )
         .then((response) => {
@@ -20,11 +32,23 @@ const UserContextProvider = ({ children }) => {
           return response.json();
         })
         .then((data) => {
-          setUserData(data);
-          setIsLoading(false);
-
           console.log(data.user);
-          console.log(userData.about.address);
+     
+
+          setUserData(data);
+          setIsLoading(true);
+          setIsLoading(false);
+          // -----------------------
+          // setUserName(userData.user.about.name);
+          // setUserTitle(userData.user.about.title);
+          // setUserSubTitle(userData.user.about.subTitle);
+          // setUserPic(userData.user.about.avatar.url);
+          // setUserAddress(userData.user.about.address);
+          // setUserDesc(userData.user.about.description);
+          // setUserService(userData.user.services);
+          // -----------------------
+          setIsLoading(false);
+          console.log(userData.user.services);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -32,7 +56,7 @@ const UserContextProvider = ({ children }) => {
     };
 
     fetchData(); // Data is available, no longer loading
-  }, [userId]);
+  }, [isLoading]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -43,7 +67,20 @@ const UserContextProvider = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ userData, isLoading, error }}>
+    <UserContext.Provider
+      value={{
+        userData,
+        isLoading,
+        error,
+        userName,
+        userTitle,
+        userSubTitle,
+        userPic,
+        userAddress,
+        userDesc,
+        userService,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );
