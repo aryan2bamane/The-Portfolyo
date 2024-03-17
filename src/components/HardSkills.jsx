@@ -15,6 +15,8 @@ const HardSkills = () => {
     // userService,
   } = useContext(UserContext);
   const hardSkills = userData.user.skills;
+  const sortedSkills = hardSkills.sort((a, b) => a.sequence - b.sequence);
+
   return (
     <>
       <div className="flex justify-center ">
@@ -34,7 +36,7 @@ const HardSkills = () => {
       <div className="grid grid-cols-3 w-full py-10 gap-5">
         {userData && hardSkills ? (
           <>
-            {hardSkills.map((skill) => (
+            {sortedSkills.map((skill) => (
               <div className="w-full bg-[#e9e9e9] h-[10vh]" key={skill._id}>
                 {skill.name}
               </div>

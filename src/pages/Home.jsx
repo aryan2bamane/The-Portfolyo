@@ -15,9 +15,9 @@ const Home = () => {
   const userService = userData.user.services;
 
   return (
-    <>
+    <div>
       {/* First */}
-      <div className="overflow-y-auto px-24 flex flex-col items-center gap-20 h-[89vh]">
+      <div className=" px-24 flex flex-col items-center gap-20">
         <div className="flex flex-col items-center">
           <div className="w-[2px] h-32 bg-[#e9e9e9]"></div>
           <div className="w-2 h-2 mr-2 rounded-full bg-[#f44336] relative left-1"></div>
@@ -74,7 +74,7 @@ const Home = () => {
         {/* Hard Skills*/}
         {userData.user.skills ? <HardSkills /> : null}
       </div>
-    </>
+    </div>
   );
 };
 
