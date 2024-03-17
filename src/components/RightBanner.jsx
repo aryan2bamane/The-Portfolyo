@@ -7,8 +7,12 @@ const RightBanner = () => {
 
   return (
     <>
-      <div className="mt-24 w-4/12 bg-blue-300 h-[89.6vh] fixed right-0">
-        <img src={isLoading ? null : userPic} alt="" />
+      <div className="mt-24 w-3/12 fixed right-0">
+        <img
+          src={isLoading ? null : userPic}
+          alt=""
+          className="h-screen w-full"
+        />
       </div>
     </>
   );
