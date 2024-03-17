@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#202121] text-red-500 flex flex-col justify-between items-center py-10 h-[89.9vh] w-24 fixed left-0 top-24">
+    <div className="bg-[#202121] text-red-500 py-32 flex flex-col justify-between items-center h-[89.9vh] w-24 fixed left-0 top-24">
       <div className="tag text-white rotate-[-90deg]">The Tag</div>
       <div className="socials flex flex-col gap-5">
         <img

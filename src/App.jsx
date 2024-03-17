@@ -13,6 +13,7 @@ import Blogs from "./pages/Blogs";
 import Other from "./pages/Other";
 import Home from "./pages/Home.jsx";
 import Layout from "./components/Layout.jsx";
+import UserContextProvider from "./context/UserContextProvider.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,7 +30,9 @@ const router = createBrowserRouter(
 const App = () => {
   return (
     <>
-      <RouterProvider router={router} />
+      <UserContextProvider>
+        <RouterProvider router={router} />
+      </UserContextProvider>
     </>
   );
 };

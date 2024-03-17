@@ -1,15 +1,16 @@
 .scroll-progress-container {
   position: fixed;
-  top: 10vh;
+  top: 10.5vh;
   /* Adjust according to your navbar height */
-  right: 50%;
-  height: 90vh;
+  right: 33.3%;
+  /* margin-top: 10vh; */
   /* Adjust according to remaining viewport height */
   width: 4px;
   /* Adjust the width of the progress bar */
   background-color: #fff;
   /* Change the background color of the progress bar container */
-  z-index: 9999;
+  z-index: 49;
+  height: 90vh;
 }
 
 .scroll-progress-bar {
