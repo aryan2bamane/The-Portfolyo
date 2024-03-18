@@ -13,8 +13,8 @@ const Layout = () => {
         <Navbar />
         <div className="flex h-full">
           <Sidebar />
-          <div className="flex  pt-24 ml-24 w-[71vw] ">
-            <div className="w-full">
+          <div className="flex  pt-24 ml-24 w-[71vw] justify-center items-center ">
+            <div className="w-full font-[600] ">
               <Outlet />
               <Footer />
             </div>
