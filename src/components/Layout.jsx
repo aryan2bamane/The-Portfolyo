@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import ScrollProgressBar from "./ScrollProgressBar";
 import RightBanner from "./RightBanner";
+import Footer from "./Footer";
 const Layout = () => {
   return (
     <>
@@ -12,9 +13,10 @@ const Layout = () => {
         <Navbar />
         <div className="flex h-full">
           <Sidebar />
-          <div className="flex pt-24 ml-24 w-full ">
-            <div className="w-4/6 overflow-y-auto pr-10">
+          <div className="flex  pt-24 ml-24 w-[71vw] ">
+            <div className="w-full">
               <Outlet />
+              <Footer />
             </div>
           </div>
           <ScrollProgressBar />

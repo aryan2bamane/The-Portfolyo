@@ -4,6 +4,7 @@ import LanguageSkills from "../components/LanguageSkills";
 import Services from "../components/Services";
 import HardSkills from "../components/HardSkills";
 import Reviews from "../components/Reviews";
+import LatestBlogs from "../components/LatestBlogs";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -16,7 +17,7 @@ const Home = () => {
   const userService = userData.user.services;
 
   return (
-    <div className="overflow-y-auto w-[60vw]">
+    <div className="w-full">
       {/* First */}
       <div className="  flex flex-col items-center gap-20 h-full">
         <div className="flex flex-col items-center">
@@ -39,7 +40,7 @@ const Home = () => {
       {/* About */}
       <div className=" px-24 flex flex-col items-center gap-10 ">
         {/* ROUNDED IMAGE */}
-        <div className="w-44 h-56 rounded-b-full pb-6 bg-[#2021241a] flex items-center justify-center">
+        <div className="w-44 h-40 rounded-b-full pb-6 bg-[#2021241a] flex items-center justify-center">
           <div className="rounded-full h-32 w-32 overflow-hidden">
             <img src={isLoading ? null : userPic} alt="" />
           </div>
@@ -75,6 +76,9 @@ const Home = () => {
 
         {/*Reviews*/}
         {userData.user.testimonials ? <Reviews /> : null}
+
+        {/* Latest Blogs */}
+        {userData.user.posts ? <LatestBlogs /> : null}
       </div>
     </div>
   );
