@@ -48,7 +48,7 @@ const UserContextProvider = ({ children }) => {
           // setUserService(userData.user.services);
           // -----------------------
           setIsLoading(false);
-          console.log(userData.user.services);
+          // console.log(userData.user.services);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
