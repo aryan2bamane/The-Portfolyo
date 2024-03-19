@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
-import UserContext from "../context/userContext";
+// import UserContext from "../context/userContext";
 import SectionHeading from "./SectionHeading";
+import Carousel from "./Carousel";
 
 const Reviews = () => {
-  const { userData } = useContext(UserContext);
-  const testimonials = userData.user.testimonials;
+  // const { userData } = useContext(UserContext);
+  // const testimonials = userData.user.testimonials;
 
   return (
     <>
       <SectionHeading heading={"Reviews"} />
-
-      <div className="flex justify-center pb-20">
+      <Carousel />
+      {/* <div className="flex justify-center pb-20">
         {testimonials.map((review) => (
           <div className=" flex flex-col w-full bg-[#e9e9e9] " key={review._id}>
             <img src={review.image.url} alt="" className="h-20 w-20" />
@@ -19,7 +20,7 @@ const Reviews = () => {
             <p>{review.review}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -12,11 +12,11 @@ const Work = () => {
   return (
     <>
       {!isLoading && userData && userData.user.timeline ? (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 ml-10">
           {sortedJobs.map((job) => (
             <div className="flex ">
               <div className="h-full flex flex-col justify-center items-center">
-                <div className="w-2 h-2 mr-2 rounded-full bg-[#f44336] relative left-1"></div>
+                <div className="w-3 h-3 mr-2 rounded-full bg-[#f44336] relative left-1"></div>
                 <div className="w-[2px] h-full bg-[#e9e9e9]"></div>
               </div>
               <div key={job._id} className=" w-full ">
@@ -37,7 +37,7 @@ const Work = () => {
 
                 <ul>
                   {job.bulletPoints.map((point, index) => (
-                    <li key={index}>{point}</li>
+                    <li key={index} className="pl-5 list-disc ml-5">{point}</li>
                   ))}
                 </ul>
               </div>

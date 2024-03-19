@@ -12,7 +12,8 @@ const Layout = () => {
       <div className="flex flex-col ">
         <Navbar />
         <div className="flex h-full">
-          <Sidebar />
+          {window.screen.width >= 1000 ? <Sidebar /> : null}
+
           <div className="flex  pt-24 ml-24 w-[71vw] justify-center items-center ">
             <div className="w-full font-[600] ">
               <Outlet />
@@ -20,7 +21,7 @@ const Layout = () => {
             </div>
           </div>
           <ScrollProgressBar />
-          <RightBanner />
+          {window.screen.width >= 1000 ? <RightBanner /> : null}
         </div>
       </div>
     </>

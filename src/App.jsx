@@ -35,6 +35,7 @@ const App = () => {
       <UserContextProvider>
         <RouterProvider router={router} />
       </UserContextProvider>
+      
     </>
   );
 };
