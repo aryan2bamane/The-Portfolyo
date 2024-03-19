@@ -6,6 +6,7 @@ import PageSubTitle from "../components/PageSubTitle";
 import UserContext from "../context/userContext";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Blogs = () => {
   const { userData } = useContext(UserContext);
@@ -52,6 +53,7 @@ const Blogs = () => {
         {/* AllBlogs End*/}
       </div>
       <ContactCard />
+      <Footer />
     </div>
   );
 };

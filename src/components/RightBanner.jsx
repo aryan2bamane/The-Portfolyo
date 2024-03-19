@@ -7,7 +7,7 @@ const RightBanner = () => {
 
   return (
     <>
-      <div className="w-0 lg:w-[30vw] mt-24  fixed right-0">
+      <div className="w-0 lg:w-[30vw] h-[90vh]">
         <img
           src={isLoading ? null : userPic}
           alt=""

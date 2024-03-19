@@ -17,7 +17,7 @@ const ScrollProgressBar = () => {
   }, []);
 
   return (
-    <div className="scroll-progress-container">
+    <div className="scroll-progress-container overflow-y-auto">
       <div className="scroll-progress-bar" style={{ height: scrollProgress }}></div>
     </div>
   );

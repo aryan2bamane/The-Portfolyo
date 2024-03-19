@@ -1,85 +1,46 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+const CustomNavLink = ({ to, children }) => {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `block py-2 pr-4 pl-3 duration-200 ${
+          isActive ? "text-[#FF4A3B]" : "text-white"
+        } `
+      }
+    >
+      {children}
+    </NavLink>
+  );
+};
+
 const Navbar = () => {
   return (
-    <div className="bg-[#202121] text-white flex justify-between w-full  h-24 items-center fixed top-0 z-50">
+    <div id="NavBar" className="bg-[#202121] text-white flex justify-between w-full h-24 items-center fixed top-0 z-50">
       <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
         Logo
       </div>
       <div>
         <ul className="flex gap-x-14">
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Home
-            </NavLink>
+            <CustomNavLink to="/">Home</CustomNavLink>
           </li>
           <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Projects
-            </NavLink>
+            <CustomNavLink to="/projects">Projects</CustomNavLink>
           </li>
           <li>
-            <NavLink
-              to="/blog"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Blog
-            </NavLink>
+            <CustomNavLink to="/blog">Blog</CustomNavLink>
           </li>
           <li>
-            <NavLink
-              to="/contact-me"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Contact
-            </NavLink>
+            <CustomNavLink to="/contact-me">Contact</CustomNavLink>
           </li>
           <li>
-            <NavLink
-              to="/story"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Other
-            </NavLink>
+            <CustomNavLink to="/story">Other</CustomNavLink>
           </li>
           <li>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#FF4A3B]" : "text-white"
-                } `
-              }
-            >
-              Services
-            </NavLink>
+            <CustomNavLink to="/services">Services</CustomNavLink>
           </li>
         </ul>
       </div>

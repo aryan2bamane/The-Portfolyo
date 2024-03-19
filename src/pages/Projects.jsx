@@ -5,6 +5,7 @@ import PageTitle from "../components/PageTitle";
 import ContactCard from "../components/ContactCard";
 import PageSubTitle from "../components/PageSubTitle";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 const Projects = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -68,6 +69,7 @@ const Projects = () => {
           )}
         </div>
         <ContactCard />
+        <Footer />
       </div>
     </>
   );

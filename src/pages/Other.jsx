@@ -5,6 +5,7 @@ import ContactCard from "../components/ContactCard";
 import PageTitle from "../components/PageTitle";
 import PageSubTitle from "../components/PageSubTitle";
 import Work from "../components/Work";
+import Footer from "../components/Footer";
 
 const Other = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -16,7 +17,7 @@ const Other = () => {
   console.log(sortedJobs);
 
   return (
-    <div className="  flex flex-col items-center gap-10 h-full">
+    <div className="overflow-y-auto  flex flex-col items-center gap-10 h-full">
       <StringDesign />
       <div className="gap-5 flex flex-col items-center w-full">
         <PageTitle title="Success Story" />
@@ -33,6 +34,7 @@ const Other = () => {
         </>
       </div>
       <ContactCard />
+      <Footer />
     </div>
   );
 };

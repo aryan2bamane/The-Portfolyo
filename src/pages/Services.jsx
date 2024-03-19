@@ -6,6 +6,7 @@ import StringDesign from "../components/StringDesign";
 import Reviews from "../components/Reviews";
 import ContactCard from "../components/ContactCard";
 import Pricing from "../components/Pricing";
+import Footer from "../components/Footer";
 
 const Services = () => {
   return (
@@ -21,6 +22,7 @@ const Services = () => {
         <Reviews />
         <ContactCard />
       </div>
+      <Footer />
     </>
   );
 };

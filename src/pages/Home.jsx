@@ -7,6 +7,7 @@ import StringDesign from "../components/StringDesign";
 import ContactCard from "../components/ContactCard";
 import SectionHeading from "../components/SectionHeading";
 import AllServices from "../components/AllServices";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -115,6 +116,7 @@ const Home = () => {
       </div>
 
       <ContactCard />
+      <Footer />
     </div>
   );
 };
