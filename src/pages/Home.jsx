@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import UserContext from "../context/userContext";
 import LanguageSkills from "../components/LanguageSkills";
-import Services from "../components/Services";
 import HardSkills from "../components/HardSkills";
 import Reviews from "../components/Reviews";
 import LatestBlogs from "../components/LatestBlogs";
 import StringDesign from "../components/StringDesign";
 import ContactCard from "../components/ContactCard";
+import SectionHeading from "../components/SectionHeading";
+import AllServices from "../components/AllServices";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -33,12 +34,33 @@ const Home = () => {
         </div>
         {/* <div className="h-1 bg-[#e9e9e9] relative top-36" id="more"></div> */}
         <div>
-          <div className="w-44 h-28 rounded-t-full p-6 bg-[#2021241a] flex justify-center items-center">
+          <div className="w-44 h-28 rounded-t-full pt-20 bg-[#2021241a] flex justify-center items-center">
             {" "}
-            <a href="#more">More</a>
+            {/* <a href="#more">More</a> */}
+            <a
+              href="#more"
+              className="mil-link mil-icon-link bg-[#f44336] w-10 h-10 rounded-full p-2 text-white scale-150"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-arrow-right rotate-90 "
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
           <div className="w-44 h-28 bg-[#2021241a]" id="more"></div>
           <div className="w-44 h-40 rounded-b-full pb-6 bg-[#2021241a] flex items-center justify-center">
+            {/* ROUNDED IMAGE */}
             <div className="rounded-full h-32 w-32 overflow-hidden">
               <img src={isLoading ? null : userPic} alt="" />
             </div>
@@ -48,8 +70,6 @@ const Home = () => {
       {/* Second */}
       {/* About */}
       <div className=" px-24 flex flex-col items-center gap-10 ">
-        {/* ROUNDED IMAGE */}
-
         <div className="w-full h-[50vh] flex flex-col justify-center items-center gap-16">
           {" "}
           {/* Info */}
@@ -71,7 +91,8 @@ const Home = () => {
         </div>
 
         {/* Services */}
-        {userData.user.services ? <Services /> : null}
+        <SectionHeading heading="Services" />
+        {userData.user.services ? <AllServices /> : null}
 
         {/* Laguage Skills*/}
         {userData.laguage ? <LanguageSkills /> : null}
