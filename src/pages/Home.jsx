@@ -7,7 +7,6 @@ import StringDesign from "../components/StringDesign";
 import ContactCard from "../components/ContactCard";
 import SectionHeading from "../components/SectionHeading";
 import AllServices from "../components/AllServices";
-import Caroausel1 from "../components/Caroausel1";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -102,14 +101,14 @@ const Home = () => {
         {/* Hard Skills*/}
         {userData.user.skills ? <HardSkills /> : null}
 
-        {/* Reviews
-        <div className="w-50vw">
+        Reviews
+        <div className="w-full">
           {userData.user.testimonials ? (
             <Reviews testimonials={userReview} />
           ) : null}
-        </div> */}
+        </div>
 
-        <Caroausel1 />
+       
 
         {/* Latest Blogs */}
         {userData.user.posts ? <LatestBlogs /> : null}

@@ -1,0 +1,13 @@
+.center-image {
+    display: block;
+    margin: 0 auto;
+    /* Centers the image horizontally */
+}
+
+.slide {
+    text-align: center;
+    /* Centers content within the slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
