@@ -2,15 +2,15 @@ import React from "react";
 
 const SectionHeading = ({ heading }) => {
   return (
-    <div className="flex justify-center py-10">
-      <div className="flex flex-row-reverse items-center pr-10 ">
-        <div className="h-[2px] w-80 bg-[#e9e9e9]"></div>
-        <div className="w-2 h-2 mr-2 rounded-full bg-[#f44336] relative left-2"></div>
+    <div className="flex justify-center py-4 sm:py-6 md:py-8 lg:py-10">
+      <div className="flex items-center w-1/3 md:w-auto">
+        <div className="h-[2px] flex-1 bg-[#e9e9e9]"></div>
+        <div className="w-2 h-2 ml-2 rounded-full bg-[#f44336]"></div>
       </div>
-      <p className="leading-[28.8px] text-[24px] mx-5 font-[600]">{heading}</p>
-      <div className="flex  items-center pl-10">
-        <div className="h-[2px] w-80 bg-[#e9e9e9]"></div>
-        <div className="w-2 h-2 mr-2 rounded-full bg-[#f44336] relative right-1"></div>
+      <p className="flex-shrink-0 text-lg font-semibold mx-5">{heading}</p>
+      <div className="flex items-center w-1/3 md:w-auto">
+        <div className="h-[2px] flex-1 bg-[#e9e9e9]"></div>
+        <div className="w-2 h-2 mr-2 rounded-full bg-[#f44336]"></div>
       </div>
     </div>
   );

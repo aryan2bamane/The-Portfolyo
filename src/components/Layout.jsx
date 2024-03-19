@@ -23,24 +23,6 @@ const Layout = () => {
 
   return (
     <>
-      {/* <div className="flex flex-col">
-        <Navbar />
-
-        <div className="flex h-full">
-          {isDesktop && <Sidebar />}
-
-          <div className="w-[100vw] flex justify-center items-center pt-24 ml-24 lg:w-[65vw]">
-            <div className="w-full font-[600]">
-              <Outlet />
-              <Footer />
-            </div>
-          </div>
-
-          {isDesktop && <ScrollProgressBar />}
-          {isDesktop && <RightBanner />}
-        </div>
-      </div> */}
-
       {isDesktop ? <Navbar /> : <MobileNav />}
       <div
         id="Main"

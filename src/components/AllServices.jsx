@@ -7,7 +7,7 @@ const AllServices = () => {
   const userService = userData.user.services;
   return (
     <>
-      <div className="grid grid-cols-3 w-full gap-5 py-10  justify-center items-center">
+      <div className="md:grid lg:grid-cols-3 w-full gap-5 lg:py-10  justify-center items-center">
         {userData && userService ? (
           <>
             {userService.map((service) => (

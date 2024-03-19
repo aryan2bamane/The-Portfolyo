@@ -11,7 +11,7 @@ const Contact = () => {
   const mailId = userData.user.email;
   return (
     <>
-      <div className="w-full h-full flex flex-col justify-center items-center gap-10">
+      <div className="mt-60 lg:mt-0 w-full h-full flex flex-col justify-center items-center gap-10 ">
         <div className="  flex flex-col items-center gap-10 h-full w-full">
           <StringDesign />
           <div className="gap-5 flex flex-col items-center w-full">
@@ -32,8 +32,8 @@ const Contact = () => {
         {/* <div className="map w-[50vw] h-[50vh] bg-[#e9e9e9]"></div> */}
         <SectionHeading heading={"Let's Connect"} />
 
-        <div className="flex flex-col w-full justify-center px-44 gap-10">
-          <div className="flex gap-5">
+        <div className="flex flex-col w-full px-5 justify-center lg:px-44 gap-10">
+          <div className="lg:flex gap-5">
             <div className="w-2/4 pr-5">
               <input
                 type="text"
@@ -60,8 +60,8 @@ const Contact = () => {
             placeholder="TELL US ABOUT YOUR PROJECT "
           />
         </div>
-        <div className="flex w-full justify-between items-center p-20">
-          <p className="text-slate-500 font-normal">
+        <div className="lg:flex w-full justify-between items-center p-20">
+          <p className="text-slate-500 font-normal my-5">
             <span className="text-[#f44336]">*</span>We promise not to disclose
             your personal information to third parties.
           </p>

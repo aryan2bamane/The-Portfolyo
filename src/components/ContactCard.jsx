@@ -14,7 +14,7 @@ const ContactCard = () => {
       </div>
 
       <div className="text-center w-full flex flex-col justify-center items-center py-10 gap-10">
-        <p className="w-[40vw] leading-[45.6px] text-[38px] font-[600]">
+        <p className="px-5 lg:px-0 lg:w-[40vw] leading-[45.6px] text-[38px] font-[600]">
           Ready to bring your ideas to life? I'm here to help
         </p>
         <Link to="/contact-me">

@@ -22,12 +22,12 @@ const Home = () => {
 
   return (
     <div>
-      <div className="  flex flex-col items-center gap-20 h-full">
+      <div className="  flex flex-col items-center gap-5 lg:gap-20 lg:h-full">
         <StringDesign />
         {/* Intro */}
-        <div className="mx-auto flex flex-col items-center gap-10">
+        <div className="py-20 lg:py-0 mx-auto flex flex-col items-center gap-10">
           <div>HELLO! MY NAME IS</div>
-          <div className="w-min font-[Outfit] text-[92px] leading-[92px] font-semibold text-center">
+          <div className=" text-[50px] font-[Outfit] lg:text-[92px]  font-semibold text-center">
             <p>{isLoading ? null : userName}</p>
           </div>
           <div className=" font-[Outfit]  text-center">
@@ -71,12 +71,12 @@ const Home = () => {
       </div>
       {/* Second */}
       {/* About */}
-      <div className=" px-24 flex flex-col items-center gap-10 ">
-        <div className="w-full h-[50vh] flex flex-col justify-center items-center gap-16">
+      <div className="py-34 md:py-10 lg:py-0 lg:px-24 flex flex-col items-center gap-10 ">
+        <div className=" py-10 h-full gap-5 md:py-10 lg:py-0 w-full lg:h-[50vh] flex flex-col justify-center items-center lg:gap-16">
           {" "}
           {/* Info */}
-          <div>
-            <p className="leading-[120%] font-[600] text-[43.6px] text-center">
+          <div className="px-5 text-center">
+            <p className=" md:py-10 lg:py-0 lg:leading-[120%] font-[600] lg:text-[43.6px] lg:text-center">
               Hi! My name is {isLoading ? null : userName},
               {isLoading ? null : userSubTitle}
               <br /> based in {isLoading ? null : userAddress}
@@ -87,7 +87,7 @@ const Home = () => {
             <p>“</p>
           </div>
           {/* Description */}
-          <div className="text-center px-32">
+          <div className="text-center px-5 lg:px-32">
             <p>{isLoading ? null : userDesc}</p>
           </div>
         </div>
