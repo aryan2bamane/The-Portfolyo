@@ -14,6 +14,7 @@ import Other from "./pages/Other";
 import Home from "./pages/Home.jsx";
 import Layout from "./components/Layout.jsx";
 import UserContextProvider from "./context/UserContextProvider.jsx";
+import Services from "./pages/Services.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="blog" element={<Blogs />} />
       <Route path="contact-me" element={<Contact />} />
       <Route path="story" element={<Other />} />
+      <Route path="services" element={<Services />} />
     </Route>
   )
 );

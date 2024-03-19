@@ -4,7 +4,6 @@ import StringDesign from "../components/StringDesign";
 import ContactCard from "../components/ContactCard";
 import PageTitle from "../components/PageTitle";
 import PageSubTitle from "../components/PageSubTitle";
-import Year from "../components/Year";
 import Work from "../components/Work";
 
 const Other = () => {

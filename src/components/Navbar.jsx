@@ -69,6 +69,18 @@ const Navbar = () => {
               Other
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `block py-2 pr-4 pl-3 duration-200 ${
+                  isActive ? "text-[#FF4A3B]" : "text-white"
+                } `
+              }
+            >
+              Services
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
