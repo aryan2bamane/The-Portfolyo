@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import UserContext from "../context/userContext";
-import LanguageSkills from "../components/LanguageSkills";
 import HardSkills from "../components/HardSkills";
 import Reviews from "../components/Reviews";
 import LatestBlogs from "../components/LatestBlogs";
@@ -8,6 +7,7 @@ import StringDesign from "../components/StringDesign";
 import ContactCard from "../components/ContactCard";
 import SectionHeading from "../components/SectionHeading";
 import AllServices from "../components/AllServices";
+import Caroausel1 from "../components/Caroausel1";
 
 const Home = () => {
   const { userData, isLoading, error } = useContext(UserContext);
@@ -17,6 +17,8 @@ const Home = () => {
   const userPic = userData.user.about.avatar.url;
   const userAddress = userData.user.about.address;
   const userDesc = userData.user.about.description;
+  const userReview = userData.user.testimonials;
+  // console.log(userReview);
 
   return (
     <div>
@@ -82,7 +84,7 @@ const Home = () => {
           </div>
           {/* Qoute */}
           <div className="h-10 w-10 bg-[#f44336] rounded-full  flex items-center justify-center text-white text-4xl pt-4">
-            <p>"</p>
+            <p>“</p>
           </div>
           {/* Description */}
           <div className="text-center px-32">
@@ -95,13 +97,19 @@ const Home = () => {
         {userData.user.services ? <AllServices /> : null}
 
         {/* Laguage Skills*/}
-        {userData.laguage ? <LanguageSkills /> : null}
+        {/* {userData.laguage ? <LanguageSkills /> : null} */}
 
         {/* Hard Skills*/}
         {userData.user.skills ? <HardSkills /> : null}
 
-        {/*Reviews*/}
-        {userData.user.testimonials ? <Reviews /> : null}
+        {/* Reviews
+        <div className="w-50vw">
+          {userData.user.testimonials ? (
+            <Reviews testimonials={userReview} />
+          ) : null}
+        </div> */}
+
+        <Caroausel1 />
 
         {/* Latest Blogs */}
         {userData.user.posts ? <LatestBlogs /> : null}

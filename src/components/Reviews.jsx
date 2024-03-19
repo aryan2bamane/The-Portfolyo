@@ -3,18 +3,7 @@ import UserContext from "../context/userContext";
 import SectionHeading from "./SectionHeading";
 
 const Reviews = () => {
-  const {
-    userData,
-    isLoading,
-    error,
-    // userName,
-    // userTitle,
-    // userSubTitle,
-    // userPic,
-    // userAddress,
-    // userDesc,
-    // userService,
-  } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
   const testimonials = userData.user.testimonials;
 
   return (
