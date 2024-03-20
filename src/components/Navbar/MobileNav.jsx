@@ -30,9 +30,12 @@ const MobileNav = () => {
 
   return (
     <div className="bg-[#202121] text-white w-full h-24 fixed top-0 z-50 flex justify-between items-center">
-      <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
-        Logo
-      </div>
+      <NavLink className={"h-24"}>
+        <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
+          <p className="text-6xl font-semibold">C</p>
+          <p className="text-7xl relative right-5 bottom-5">.</p>
+        </div>
+      </NavLink>
 
       <div className="absolute top-6 right-3  flex justify-center items-center gap-5">
         <NavLink to={"/contact-me"}>
