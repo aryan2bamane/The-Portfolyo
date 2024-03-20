@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../context/userContext";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+  const { userData } = useContext(UserContext);
+  const social_handles = userData.user.social_handles;
+  console.log(social_handles);
   return (
     <div className="w-0 lg:w-24 bg-[#202121] text-red-500 py-32 flex flex-col justify-between items-center h-[90vh] ">
       <div className="tag text-white rotate-[-90deg]">The Tag</div>
       <div className="socials flex flex-col gap-5">
-        <img
-          className="w-7 h-7"
-          src="https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718346601-xldm.webp"
-        />
-        <img
-          className="w-7 h-7"
-          src="https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718328750-d4jsq.webp"
-        />
-        <img
-          className="w-7 h-7"
-          src="https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718250873-3038n7.webp"
-        />
-        <img
-          className="w-7 h-7"
-          src="https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718263294-2lfj67.webp"
-        />
+        {userData
+          ? social_handles.map((handle) => (
+              <NavLink key={handle._id} to={handle.url}>
+                <img
+                  className="w-7 h-7"
+                  src={handle.image.url}
+                  alt={handle.platform}
+                />
+              </NavLink>
+            ))
+          : null}
       </div>
     </div>
   );
