@@ -5,6 +5,7 @@ const UserContextProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isFullWidth, setFullWidth] = useState(false);
 
   // Vars--------------------------------------
 
@@ -33,7 +34,6 @@ const UserContextProvider = ({ children }) => {
         })
         .then((data) => {
           console.log(data.user);
-     
 
           setUserData(data);
           setIsLoading(true);
@@ -79,6 +79,8 @@ const UserContextProvider = ({ children }) => {
         userAddress,
         userDesc,
         userService,
+        isFullWidth,
+        setFullWidth,
       }}
     >
       {children}

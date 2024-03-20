@@ -8,7 +8,7 @@ const CustomNavLink = ({ to, children }) => {
       className={({ isActive }) =>
         `block py-2 pr-4 pl-3 duration-200 ${
           isActive ? "text-[#FF4A3B]" : "text-white"
-        } `
+        } relative top-0 `
       }
     >
       {children}
@@ -30,7 +30,7 @@ const Navbar = () => {
       </NavLink>
       <div>
         <ul className="flex gap-x-14">
-          <li>
+          <li className="flex w-min overflow-hidden hover:overflow-visible">
             <CustomNavLink to="/">Home</CustomNavLink>
           </li>
           <li>

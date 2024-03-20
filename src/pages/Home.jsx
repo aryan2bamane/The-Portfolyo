@@ -35,7 +35,6 @@ const Home = () => {
         <div>
           <div className="w-44 h-28 pb-20 rounded-t-full pt-20 bg-[#2021241a] flex justify-center items-center">
             {" "}
-            {/* <a href="#more">More</a> */}
             <a
               href="#more"
               className="mil-link mil-icon-link bg-[#f44336] w-10 h-10 rounded-full p-2 text-white scale-150"
