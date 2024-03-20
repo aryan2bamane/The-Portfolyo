@@ -11,7 +11,7 @@ const Contact = () => {
   const mailId = userData.user.email;
   return (
     <>
-      <div className="mt-60 lg:mt-0 w-full h-full flex flex-col justify-center items-center gap-10 ">
+      <div className="mt-60 lg:mt-52 w-full h-full flex flex-col justify-center items-center gap-10 ">
         <div className="  flex flex-col items-center gap-10 h-full w-full">
           <StringDesign />
           <div className="gap-5 flex flex-col items-center w-full">
@@ -19,7 +19,7 @@ const Contact = () => {
             <PageSubTitle title="Get in Touch!" />
           </div>
         </div>
-        <div className="flex gap-5 justify-center items-center py-10 text-[#f44336]">
+        <div className=" flex gap-5 justify-center items-center py-10 text-[#f44336]">
           <p>
             Call: <span className="text-black"> {phNo}</span>{" "}
           </p>
@@ -34,7 +34,7 @@ const Contact = () => {
 
         <div className="flex flex-col w-full px-5 justify-center lg:px-44 gap-10">
           <div className="lg:flex gap-5">
-            <div className="w-2/4 pr-5">
+            <div className="w-full lg:w-2/4 pr-5">
               <input
                 type="text"
                 placeholder="WHAT'S YOUR NAME"
@@ -43,7 +43,7 @@ const Contact = () => {
 
               <hr />
             </div>
-            <div className="w-2/4 pl-5">
+            <div className="w-full lg:w-2/4pl-5">
               <input
                 type="email"
                 placeholder="YOUR EMAIL"

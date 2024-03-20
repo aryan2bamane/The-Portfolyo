@@ -18,7 +18,10 @@ const CustomNavLink = ({ to, children }) => {
 
 const Navbar = () => {
   return (
-    <div id="NavBar" className="bg-[#202121] text-white flex justify-between w-full h-24 items-center fixed top-0 z-50">
+    <div
+      id="NavBar"
+      className="bg-[#202121] text-white flex justify-between w-full h-24 items-center fixed top-0 z-50"
+    >
       <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
         Logo
       </div>
@@ -45,7 +48,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
-        Message
+        <NavLink to={"/contact-me"}>
+          <img src="/icons8-envelope-100.png" alt="" className="w-10" />
+        </NavLink>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 
 const Services = () => {
   return (
-    <>
+    <div>
       <div className="w-full flex flex-col items-center gap-10 h-full px-24 ">
         <StringDesign />
         <PageTitle title="This is what I do best" />
@@ -22,8 +22,8 @@ const Services = () => {
         <Reviews />
         <ContactCard />
       </div>
-      <Footer />
-    </>
+        <Footer />
+    </div>
   );
 };
 

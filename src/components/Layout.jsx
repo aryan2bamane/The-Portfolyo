@@ -33,7 +33,7 @@ const Layout = () => {
             <Sidebar />
           </div>
         )}
-        <div id="outlet" className="h-[90vh] w-full overflow-y-auto">
+        <div id="outlet" className="h-[90vh] w-full overflow-y-auto overflow-x-hidden">
           <Outlet />
         </div>
         <div id="scrollBarHolder" className="overflow-y-auto">

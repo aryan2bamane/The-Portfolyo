@@ -17,8 +17,6 @@ const Home = () => {
   const userPic = userData.user.about.avatar.url;
   const userAddress = userData.user.about.address;
   const userDesc = userData.user.about.description;
-  const userReview = userData.user.testimonials;
-  // console.log(userReview);
 
   return (
     <div>
@@ -34,9 +32,8 @@ const Home = () => {
             <p>{isLoading ? null : userTitle}</p>
           </div>
         </div>
-        {/* <div className="h-1 bg-[#e9e9e9] relative top-36" id="more"></div> */}
         <div>
-          <div className="w-44 h-28 rounded-t-full pt-20 bg-[#2021241a] flex justify-center items-center">
+          <div className="w-44 h-28 pb-20 rounded-t-full pt-20 bg-[#2021241a] flex justify-center items-center">
             {" "}
             {/* <a href="#more">More</a> */}
             <a
@@ -60,7 +57,7 @@ const Home = () => {
               </svg>
             </a>
           </div>
-          <div className="w-44 h-28 bg-[#2021241a]" id="more"></div>
+          <div className="w-44 h-20 bg-[#2021241a] pt-40" id="more"></div>
           <div className="w-44 h-40 rounded-b-full pb-6 bg-[#2021241a] flex items-center justify-center">
             {/* ROUNDED IMAGE */}
             <div className="rounded-full h-32 w-32 overflow-hidden">
@@ -91,26 +88,17 @@ const Home = () => {
             <p>{isLoading ? null : userDesc}</p>
           </div>
         </div>
-
         {/* Services */}
         <SectionHeading heading="Services" />
         {userData.user.services ? <AllServices /> : null}
-
         {/* Laguage Skills*/}
         {/* {userData.laguage ? <LanguageSkills /> : null} */}
-
         {/* Hard Skills*/}
         {userData.user.skills ? <HardSkills /> : null}
-
         Reviews
         <div className="w-full">
-          {userData.user.testimonials ? (
-            <Reviews testimonials={userReview} />
-          ) : null}
+          {userData.user.testimonials ? <Reviews /> : null}
         </div>
-
-       
-
         {/* Latest Blogs */}
         {userData.user.posts ? <LatestBlogs /> : null}
       </div>

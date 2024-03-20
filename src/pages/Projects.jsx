@@ -32,7 +32,7 @@ const Projects = () => {
                   <img
                     src={project.image.url}
                     alt=""
-                    className="h-[30vh] w-[50vw] lg:h-[60vh]"
+                    className="h-[30vh] lg:w-[50vw] lg:h-[60vh]"
                   />
                   <div className="flex justify-between items-center bg-slate-800 text-white w-full h-max pl-10">
                     <p>{project.title}</p>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
@@ -29,25 +29,32 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="bg-[#202121] text-white w-full h-24 items-center fixed top-0 z-50">
+    <div className="bg-[#202121] text-white w-full h-24 fixed top-0 z-50 flex justify-between items-center">
       <div className="bg-[#FF4A3B] text-white h-full w-24 flex justify-center items-center">
         Logo
       </div>
-      <div className="absolute top-0 right-0 mr-4 mt-2">
+
+      <div className="absolute top-6 right-3  flex justify-center items-center gap-5">
+        <NavLink to={"/contact-me"}>
+          <img src="/icons8-envelope-100.png" alt="" className="w-10" />
+        </NavLink>
+
         <button onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white cursor-pointer"
+            width="34"
+            height="30"
+            viewBox="0 0 26 26"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className=""
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
+            <path d="M21 12H3" />
+            <path d="M21 4H3" />
+            <path d="M21 20H3" />
           </svg>
         </button>
       </div>

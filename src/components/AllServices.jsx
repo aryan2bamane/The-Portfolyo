@@ -7,12 +7,12 @@ const AllServices = () => {
   const userService = userData.user.services;
   return (
     <>
-      <div className="md:grid lg:grid-cols-3 w-full gap-5 lg:py-10  justify-center items-center">
+      <div className="md:grid md:grid-cols-3 w-full gap-5 lg:py-10  justify-center items-center">
         {userData && userService ? (
           <>
             {userService.map((service) => (
               <div
-                className="w-full bg-[#e9e9e9] h-full flex flex-col justify-center items-center gap-2 p-10 border-2 border-slate-300"
+                className="w-full bg-[#e9e9e9] lg:h-full flex flex-col justify-center items-center gap-2 p-10 border-2 border-slate-300"
                 key={service._id}
               >
                 <img src={service.image.url} alt="" className="w-20 h-20" />

@@ -10,7 +10,7 @@ const Pricing = () => {
       <SectionHeading heading="Pricing" />
       {/* prices */}
       <section className="w-full">
-        <div className="flex justify-center gap-20 text-center ">
+        <div className="lg:flex  justify-center gap-20 text-center ">
           {Data.items.map((item, key) => (
             <div
               key={`pricing-item-${key}`}
