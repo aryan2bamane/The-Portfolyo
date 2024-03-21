@@ -23,7 +23,7 @@ const Other = () => {
         <PageTitle title="Success Story" />
         <PageSubTitle title="Success Story" />
       </div>
-      <div className="flex w-full ">
+      <div className="flex w-full justify-center">
         <>
           {!isLoading && userData && userData.user.education ? (
             <div></div>
