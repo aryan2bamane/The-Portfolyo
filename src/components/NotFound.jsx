@@ -18,7 +18,7 @@ const NotFound = () => {
           </div>
         </div>
         <div>
-          <div className="w-44 h-28 pb-20 rounded-t-full pt-20 bg-[#2021241a] flex justify-center items-center">
+          <div className="w-44 h-28 pb-20 rounded-t-full pt-20 bg-[#2021241a] flex flex-col gap-5 justify-center items-center">
             {" "}
             <NavLink
               to="/"
@@ -34,12 +34,13 @@ const NotFound = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="feather feather-arrow-right rotate-90 "
+                className="feather feather-arrow-right rotate-180 "
               >
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </NavLink>
+            <p>Back To Homepage</p>
           </div>
         </div>
       </div>
