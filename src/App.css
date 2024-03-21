@@ -1,8 +1,15 @@
-/* width */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins&family=Raleway&display=swap');
+
+
+
+
+
+
+
+
 ::-webkit-scrollbar {
   display: none;
 }
-
 
 /* For text inputs */
 input[type="text"]:focus,
@@ -12,14 +19,12 @@ input[type="email"]:active,
 textarea:focus,
 textarea:active {
   outline: none;
-  /* Removes the default outline */
   border: none;
-  /* Removes the border */
-  /* Add any additional styling you want for focused or active state */
+
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth !important;
 }
 
 
