@@ -28,7 +28,7 @@ const Home = () => {
           <div className=" text-[50px] font-[Outfit] lg:text-[92px]  font-semibold text-center">
             <p>{isLoading ? null : userName}</p>
           </div>
-          <div className=" font-[Outfit]  text-center">
+          <div className=" text-3xl text-center">
             <p>{isLoading ? null : userTitle}</p>
           </div>
         </div>
