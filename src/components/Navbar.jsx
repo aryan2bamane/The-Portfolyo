@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
       </NavLink>
       <div>
-        <ul className="flex gap-x-14">
+        <ul className="flex gap-x-10">
           <li className="flex w-min overflow-hidden hover:overflow-visible">
             <CustomNavLink to="/">Home</CustomNavLink>
           </li>
