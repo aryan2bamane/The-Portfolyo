@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import UserContext from "../context/userContext";
 
-import Year from "../components/Year";
+import NewDate from "./NewDate";
 const Work = () => {
   const { userData, isLoading, error } = useContext(UserContext);
   // const sortedEdu = hardSkills.sort((a, b) => a.sequence - b.sequence);
@@ -28,14 +28,14 @@ const Work = () => {
                   <div className="w-[2px] h-full bg-[#e9e9e9]"></div>
                 </div>
                 <div key={job._id} className=" w-full pl-5">
-                  <div className="flex  gap-5">
+                  <div className="flex w-full gap-5">
                     <p className=" font-semibold">
                       {job.company_name} as {job.jobTitle}
                     </p>
 
-                    <p>
-                      <Year fullDate={job.startDate} />-
-                      <Year fullDate={job.endDate} />
+                    <p className=" flex">
+                      <NewDate endDate={job.startDate} />-
+                      <NewDate endDate={job.endDate} />
                     </p>
                   </div>
 
